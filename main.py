@@ -37,3 +37,11 @@ def calculate_score(data: TenantData):
     score = max(0, min(score, 100))
 
     return {"tenant_score": score}
+
+# Goes to Tenant Score API Root
+@app.get("/")
+def read_root():
+    return {
+        "message": "Tenant Score API is alive!",
+        "docs_url": "/docs"
+    }
